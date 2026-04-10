@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
     <title>Cinévia</title>
 </head>
 <body>
@@ -12,9 +13,9 @@
             <img src="images/Cinevia.png" alt="Cinevia">
             <ul class="nav-links">
                 <li><a href="#">Acceuil</a></li>
-                <li><a href="#">Films</a></li>
-                <li><a href="#">Favoris</a></li>
-                <input type="text" placeholder="   Recherche...">
+                <li><a href="#Gate">Films</a></li>
+                <li><a href="#fav">Favoris</a></li>
+                <input type="text" id="searchInput" placeholder="   Recherche...">
             </ul>
         </section>
     </header>
@@ -26,36 +27,62 @@
             Explorez, recherchez et ajoutez vos films préférés
         </p>
         <div class="hero-buttons">
-            <a href="#" class="btn-exp">Explorez maintenant</a>
+            <a href="#Gate" class="btn-exp">Explorez maintenant</a>
         </div>
     </div>
     </section>
 
     <section>
-         <div class="Gategory">
-            <a href="#" class="buttons">Tous</a>
-            <a href="#" class="buttons">Horror</a>
-            <a href="#" class="buttons">Drama</a>
-            <a href="#" class="buttons">Action</a>
+         <div class="Gategory" id="Gate">
+            <a href="#" class="buttons" data-category="Tous">Tous</a>
+            <a href="#" class="buttons" data-category="Horror">Horror</a>
+            <a href="#" class="buttons" data-category="Drama">Drama</a>
+            <a href="#" class="buttons" data-category="Action">Action</a>
          </div>
     </section>
 
        <h1 class="Films-Populaires">Films Populaires</h1>
 
-    <section class="content">
-         <div class="cards">
-           <div class="card">
-            <img src="images/The walking dead.jpg" alt="The Walking Dead">
-            <p>Horror</p>
-            <h3>The Walking Dead</h3>
-        </div>
-    </section>
+<section class="content-countainer" id="content-countainer">
+    
+</section>
 
-    <h1 class="Films-Populaires">Mes Favoris</h1>
+    <h1 class="Films-Populaires" id="fav">Mes Favoris</h1>
+           <section class="content-countainer" id="fav-container"></section>
+
+
+    <div id="modal" class="modal-overlay">
+  <div class="modal">
+
+    <div class="imag">
+      <img id="modal-img">
+    </div>
+
+    <div class="modal-content">
+      <h2 id="modal-title"></h2>
+      <h4 id="modal-cat"></h4>
+
+      <br>
+      <h4>Description :</h4>
+      <br>
+
+      <p id="modal-desc"></p>
+
+
+      <button class="btn-fav" id="favBtn" onclick="toggleFav()">
+           Ajoutez aux Favoris
+      </button>
+      <button class="btn-back" onclick="closeModal()">Back</button>
+    </div>
+
+  </div>
+</div>
 
     <footer>
         <hr>
         <p>© 2026 Cinevia - Tous droits réservés</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
