@@ -164,13 +164,6 @@ html {
     transition: transform 0.3s ease;
 }
 
-.card-fav img {
-    width: 100%;
-    border-radius: 10px;
-    height: 250px;
-    object-fit: cover;
-}
-
 .btn-details {
     margin-top: 10px;
     padding: 10px;
@@ -231,6 +224,13 @@ html {
     line-height: 1.6;
 }
 
+.card-fav img {
+    width: 100%;
+    border-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+}
+
 .btn-fav {
     margin-top: 20px;
     padding: 12px 20px;
@@ -279,4 +279,13 @@ footer {
 
 footer p {
     padding: 20px 0px;
+}
+
+@media (max-width: 1024px) {
+    .content-countainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card, .card-fav {
+        width: 100%;
+    }
 }
